@@ -1,6 +1,8 @@
-# EXAONE Desktop 카탈로그 (테스트)
+# Desktop App for LG K-EXAONE 카탈로그 (테스트)
 
-EXAONE Desktop의 **[Skill] → 찾아보기**, **[MCP 서버] → 찾아보기** 창이 읽어 가는 목록입니다.
+> [Desktop App for LG K-EXAONE](https://github.com/kidarigun/k-exaone-desktop)용 목록입니다. 앱과 이 목록 모두 LG AI연구원이 만들거나 보증하지 않은 **비공식 프로젝트**입니다.
+
+Desktop App for LG K-EXAONE의 **[Skill] → 찾아보기**, **[MCP 서버] → 찾아보기** 창이 읽어 가는 목록입니다.
 앱은 아래 주소의 `catalog.json`을 불러옵니다.
 
 ```

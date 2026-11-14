@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "name": "EXAONE Desktop 기본 목록 (테스트)",
+  "name": "Desktop App for LG K-EXAONE 기본 목록 (테스트)",
   "homepage": "https://github.com/kidarigun/exaone-catalog",
   "mcp": [
     {
@@ -816,7 +816,7 @@
       "name": "주간 업무 보고서",
       "summary": "한 주의 업무 메모를 정해진 형식의 주간 보고서로 정리합니다.",
       "category": "문서 작성",
-      "publisher": "EXAONE Desktop 예제",
+      "publisher": "K-EXAONE 데스크톱 앱 예제",
       "path": "skills/weekly-report"
     },
     {
@@ -824,7 +824,7 @@
       "name": "업무 메일 쓰기",
       "summary": "요청·사과·독촉·거절 등 상황에 맞는 정중한 업무 메일을 제목과 함께 씁니다.",
       "category": "문서 작성",
-      "publisher": "EXAONE Desktop 예제",
+      "publisher": "K-EXAONE 데스크톱 앱 예제",
       "path": "skills/business-email"
     },
     {
@@ -832,7 +832,7 @@
       "name": "회의록 정리",
       "summary": "회의 메모나 녹취록에서 결정 사항과 할 일(담당·기한)을 뽑아 회의록으로 만듭니다.",
       "category": "문서 작성",
-      "publisher": "EXAONE Desktop 예제",
+      "publisher": "K-EXAONE 데스크톱 앱 예제",
       "path": "skills/meeting-minutes"
     },
     {
@@ -840,7 +840,7 @@
       "name": "차트가 들어간 엑셀",
       "summary": "표 데이터를 막대·꺾은선·원형 차트가 들어간 엑셀 파일로 만듭니다. (Python 필요)",
       "category": "데이터",
-      "publisher": "EXAONE Desktop 예제",
+      "publisher": "K-EXAONE 데스크톱 앱 예제",
       "path": "skills/excel-chart",
       "requires": [
         "python"

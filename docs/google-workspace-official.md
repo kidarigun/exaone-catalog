@@ -1,6 +1,6 @@
 # Google 공식 Workspace MCP 서버 연결 안내
 
-Google이 직접 운영하는 MCP 서버(Gmail, 드라이브, 캘린더, 문서, 시트, 슬라이드, Chat, 연락처)를 EXAONE Desktop에 연결하는 방법입니다.
+Google이 직접 운영하는 MCP 서버(Gmail, 드라이브, 캘린더, 문서, 시트, 슬라이드, Chat, 연락처)를 Desktop App for LG K-EXAONE에 연결하는 방법입니다.
 내 PC에 설치할 프로그램은 없고, 브라우저로 Google 계정에 로그인해 씁니다.
 
 > **아직 개발자 미리보기입니다.** Google이 [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview) 가입자에게만 열어 두었습니다.
@@ -15,7 +15,7 @@ Google이 직접 운영하는 MCP 서버(Gmail, 드라이브, 캘린더, 문서,
 
 ## 2. Google Cloud 프로젝트 만들기
 
-1. [Google Cloud 콘솔](https://console.cloud.google.com/projectcreate)에서 새 프로젝트를 만듭니다 (예: `EXAONE Desktop`).
+1. [Google Cloud 콘솔](https://console.cloud.google.com/projectcreate)에서 새 프로젝트를 만듭니다 (예: `Desktop App for LG K-EXAONE`).
 2. 화면 위쪽에서 그 프로젝트가 선택되어 있는지 확인합니다.
 
 ## 3. API 켜기
@@ -38,11 +38,11 @@ Chat은 회사·학교 Google Workspace 계정에서만 쓸 수 있고, Google �
 ## 4. 로그인 화면(OAuth 동의 화면) 설정
 
 1. [Google 인증 플랫폼](https://console.cloud.google.com/auth/overview) → **시작하기**.
-2. 앱 이름 `EXAONE Desktop`, 지원 이메일은 내 이메일.
+2. 앱 이름 `Desktop App for LG K-EXAONE`, 지원 이메일은 내 이메일.
 3. **대상**: 회사·학교 계정이면 **내부**, 개인 Gmail이면 **외부**.
 4. **외부**라면 [대상](https://console.cloud.google.com/auth/audience) 화면의 **테스트 사용자**에 내 이메일을 추가합니다.
 5. [데이터 액세스](https://console.cloud.google.com/auth/scopes) → **범위 추가 또는 삭제** → **직접 범위 추가**에 쓸 서비스의 권한을 넣습니다.
-   EXAONE Desktop이 요청하는 권한은 다음과 같습니다 (모두 `https://www.googleapis.com/auth/`로 시작):
+   Desktop App for LG K-EXAONE이 요청하는 권한은 다음과 같습니다 (모두 `https://www.googleapis.com/auth/`로 시작):
    - Gmail: `gmail.readonly`, `gmail.compose`
    - 드라이브: `drive.readonly`, `drive.file`
    - 캘린더: `calendar.calendarlist.readonly`, `calendar.events.freebusy`, `calendar.events.readonly`
@@ -63,7 +63,7 @@ Chat은 회사·학교 Google Workspace 계정에서만 쓸 수 있고, Google �
 4. **Use this client for an AI-powered agent**(AI 에이전트용 클라이언트) 옵션을 켭니다. Google은 Workspace MCP 서버를 쓰는 클라이언트에 이 옵션을 요구하며, 이미 만든 클라이언트에서는 나중에 바꾸지 못할 수 있으니 **만들 때 켜세요**.
 5. **만들기**를 누르고 **클라이언트 ID**와 **클라이언트 보안 비밀번호**를 복사합니다.
 
-## 6. EXAONE Desktop에서 연결
+## 6. Desktop App for LG K-EXAONE에서 연결
 
 1. **[MCP 서버] → 찾아보기 → Google 공식 (미리보기)**에서 쓸 서비스(예: Gmail)의 **[연결]**을 누릅니다.
 2. 클라이언트 ID와 보안 비밀번호를 넣고 **[연결]** → 브라우저가 열립니다.
@@ -88,4 +88,4 @@ Chat은 회사·학교 Google Workspace 계정에서만 쓸 수 있고, Google �
 ## 연결 끊기
 
 - MCP 서버 창에서 서버의 **로그아웃** 버튼을 누르면 저장된 로그인 정보가 지워집니다.
-- [Google 계정 권한](https://myaccount.google.com/connections)에서 `EXAONE Desktop`의 접근 권한도 삭제할 수 있습니다.
+- [Google 계정 권한](https://myaccount.google.com/connections)에서 `Desktop App for LG K-EXAONE`의 접근 권한도 삭제할 수 있습니다.
