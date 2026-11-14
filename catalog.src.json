@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "name": "EXAONE Desktop 기본 목록 (테스트)",
+  "homepage": "https://github.com/kidarigun/exaone-catalog",
+  "mcp": [
+    {
+      "id": "filesystem",
+      "name": "내 PC 파일",
+      "summary": "지정한 폴더 안의 파일을 읽고, 찾고, 쓰고, 옮깁니다.",
+      "description": "엑사원이 고른 폴더 안에서만 파일을 다룹니다. 읽기·목록·검색 도구는 승인 없이, 쓰기·이동은 승인 후에 실행되도록 설정됩니다.",
+      "category": "파일",
+      "publisher": "MCP 공식 예제 서버",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "requires": ["node"],
+      "install": {
+        "transport": "stdio",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-filesystem@2.3.0", "{folder}"]
+      },
+      "inputs": [
+        { "key": "folder", "label": "엑사원이 쓸 폴더", "type": "folder", "required": true, "help": "이 폴더와 그 안의 하위 폴더만 접근할 수 있습니다." }
+      ],
+      "safeTools": ["read_text_file", "read_multiple_files", "list_directory", "list_directory_with_sizes", "directory_tree", "search_files", "get_file_info", "list_allowed_directories"]
+    },
+    {
+      "id": "memory",
+      "name": "기억 저장소",
+      "summary": "대화에서 알게 된 사람·프로젝트·사실을 기억해 두고 다음 대화에서 꺼내 씁니다.",
+      "description": "내용은 내 PC의 파일 하나(지식 그래프)에 저장됩니다. 저장 위치를 비우면 서버 기본 위치를 씁니다.",
+      "category": "생산성",
+      "publisher": "MCP 공식 예제 서버",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "requires": ["node"],
+      "install": {
+        "transport": "stdio",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-memory@2.1.1"],
+        "env": { "MEMORY_FILE_PATH": "{memory_file}" }
+      },
+      "inputs": [
+        { "key": "memory_file", "label": "저장 파일 경로 (선택)", "type": "text", "required": false, "placeholder": "C:\\Users\\me\\Documents\\exaone-memory.jsonl" }
+      ],
+      "safeTools": ["read_graph", "search_nodes", "open_nodes"]
+    },
+    {
+      "id": "sequential-thinking",
+      "name": "단계별 생각",
+      "summary": "복잡한 문제를 단계로 나눠 생각을 정리하고 고쳐 가며 답을 찾게 돕습니다.",
+      "category": "생각 도구",
+      "publisher": "MCP 공식 예제 서버",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "requires": ["node"],
+      "install": {
+        "transport": "stdio",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-sequential-thinking@2.1.1"]
+      },
+      "safeTools": ["sequentialthinking"]
+    },
+    {
+      "id": "deepwiki",
+      "name": "DeepWiki (GitHub 저장소 문서)",
+      "summary": "공개 GitHub 저장소의 구조와 문서를 묻고 답합니다. 설치할 프로그램이 없습니다.",
+      "category": "개발",
+      "publisher": "Cognition (DeepWiki)",
+      "homepage": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+      "requires": [],
+      "install": { "transport": "http", "url": "https://mcp.deepwiki.com/mcp" },
+      "safeTools": ["read_wiki_structure", "read_wiki_contents", "ask_question"]
+    },
+    {
+      "id": "context7",
+      "name": "Context7 (라이브러리 최신 문서)",
+      "summary": "프로그래밍 라이브러리의 최신 공식 문서와 예제를 찾아 줍니다. 설치할 프로그램이 없습니다.",
+      "description": "API 키 없이도 쓸 수 있고, 키를 넣으면 사용 한도가 늘어납니다.",
+      "category": "개발",
+      "publisher": "Upstash",
+      "homepage": "https://github.com/upstash/context7",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://mcp.context7.com/mcp",
+        "headers": { "CONTEXT7_API_KEY": "{api_key}" }
+      },
+      "inputs": [
+        { "key": "api_key", "label": "API 키 (선택)", "type": "secret", "required": false, "help": "context7.com에서 무료로 발급받을 수 있습니다.", "helpUrl": "https://context7.com/dashboard" }
+      ],
+      "safeTools": ["resolve-library-id", "get-library-docs"]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "summary": "내 GitHub 저장소의 이슈, 풀 리퀘스트, 파일을 조회하고 만듭니다.",
+      "description": "GitHub 공식 원격 서버입니다. 개인 액세스 토큰(PAT)이 필요하며, 토큰에 준 권한만큼만 동작합니다.",
+      "category": "개발",
+      "publisher": "GitHub",
+      "homepage": "https://github.com/github/github-mcp-server",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://api.githubcopilot.com/mcp/",
+        "headers": { "Authorization": "Bearer {token}" }
+      },
+      "inputs": [
+        { "key": "token", "label": "GitHub 개인 액세스 토큰", "type": "secret", "required": true, "placeholder": "github_pat_...", "help": "GitHub 설정 → Developer settings → Personal access tokens에서 만들 수 있습니다.", "helpUrl": "https://github.com/settings/personal-access-tokens" }
+      ],
+      "safeTools": []
+    },
+    {
+      "id": "time",
+      "name": "시간·시간대 변환",
+      "summary": "현재 시각을 알려 주고 도시·시간대 사이의 시간을 바꿔 줍니다.",
+      "category": "생산성",
+      "publisher": "MCP 공식 예제 서버",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+      "requires": ["uv"],
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": ["mcp-server-time", "--local-timezone=Asia/Seoul"]
+      },
+      "safeTools": ["get_current_time", "convert_time"]
+    },
+    {
+      "id": "fetch",
+      "name": "웹 페이지 가져오기",
+      "summary": "주소를 주면 웹 페이지를 읽어 Markdown 글로 바꿔 줍니다.",
+      "category": "웹",
+      "publisher": "MCP 공식 예제 서버",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "requires": ["uv"],
+      "install": { "transport": "stdio", "command": "uvx", "args": ["mcp-server-fetch"] },
+      "safeTools": []
+    }
+  ],
+  "skills": [
+    {
+      "id": "weekly-report",
+      "name": "주간 업무 보고서",
+      "summary": "한 주의 업무 메모를 정해진 형식의 주간 보고서로 정리합니다.",
+      "category": "문서 작성",
+      "publisher": "EXAONE Desktop 예제",
+      "path": "skills/weekly-report"
+    },
+    {
+      "id": "business-email",
+      "name": "업무 메일 쓰기",
+      "summary": "요청·사과·독촉·거절 등 상황에 맞는 정중한 업무 메일을 제목과 함께 씁니다.",
+      "category": "문서 작성",
+      "publisher": "EXAONE Desktop 예제",
+      "path": "skills/business-email"
+    },
+    {
+      "id": "meeting-minutes",
+      "name": "회의록 정리",
+      "summary": "회의 메모나 녹취록에서 결정 사항과 할 일(담당·기한)을 뽑아 회의록으로 만듭니다.",
+      "category": "문서 작성",
+      "publisher": "EXAONE Desktop 예제",
+      "path": "skills/meeting-minutes"
+    },
+    {
+      "id": "excel-chart",
+      "name": "차트가 들어간 엑셀",
+      "summary": "표 데이터를 막대·꺾은선·원형 차트가 들어간 엑셀 파일로 만듭니다. (Python 필요)",
+      "category": "데이터",
+      "publisher": "EXAONE Desktop 예제",
+      "path": "skills/excel-chart",
+      "requires": ["python"]
+    }
+  ]
+}
