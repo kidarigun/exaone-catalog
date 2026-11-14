@@ -30,6 +30,8 @@ https://raw.githubusercontent.com/kidarigun/exaone-catalog/main/catalog.json
 | `install.url`, `install.headers` | http 서버 주소와 헤더 |
 | `inputs` | 설치할 때 사용자에게 받을 값. `{key}`로 args·env·url·headers에 끼워 넣습니다 |
 | `safeTools` | 처음부터 승인 없이 실행할 읽기 전용 도구 |
+| `guide` | 처음 설정이 필요한 서버의 단계별 안내 페이지 (예: `docs/google-workspace.md`) — 연결 창에 [설정 안내 열기] 버튼이 나옵니다 |
+| `note`, `license` | "이 앱에서 알아 둘 점"과 라이선스 표시 |
 
 `inputs`의 `type`: `text`, `secret`(비밀번호 칸, 자격 증명 관리자에 저장), `folder`(폴더 선택 창).
 선택 입력(`required: false`)을 비워 두면 그 값이 들어간 인자·환경 변수·헤더는 빠집니다.

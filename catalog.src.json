@@ -4,6 +4,165 @@
   "homepage": "https://github.com/kidarigun/exaone-catalog",
   "mcp": [
     {
+      "id": "google-workspace",
+      "name": "Google Workspace",
+      "summary": "Gmail, 드라이브, 캘린더, 문서, 시트, 슬라이드, 할 일을 읽고 만듭니다. 메일 보내기·일정 만들기 등은 실행할 때마다 승인을 묻습니다.",
+      "description": "처음 한 번 Google Cloud에서 OAuth 클라이언트를 만들어야 합니다(약 10분, 무료). 연결한 뒤 처음 도구를 쓸 때 브라우저가 열려 Google 로그인을 합니다. 개인 Gmail 계정도 쓸 수 있습니다.",
+      "category": "Google",
+      "publisher": "taylorwilsdon/google_workspace_mcp (커뮤니티, MIT)",
+      "homepage": "https://github.com/taylorwilsdon/google_workspace_mcp",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace.md",
+      "requires": [
+        "uv"
+      ],
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "workspace-mcp@2.4.2",
+          "--single-user",
+          "--tool-tier",
+          "core",
+          "--tools",
+          "gmail",
+          "drive",
+          "calendar",
+          "docs",
+          "sheets",
+          "slides",
+          "tasks"
+        ],
+        "env": {
+          "GOOGLE_OAUTH_CLIENT_ID": "{client_id}",
+          "GOOGLE_OAUTH_CLIENT_SECRET": "{client_secret}",
+          "USER_GOOGLE_EMAIL": "{email}",
+          "OAUTHLIB_INSECURE_TRANSPORT": "1"
+        }
+      },
+      "inputs": [
+        {
+          "key": "email",
+          "label": "내 Google 계정 이메일",
+          "type": "text",
+          "required": true,
+          "placeholder": "me@gmail.com",
+          "help": "이 계정으로 로그인해 Gmail·드라이브 등을 씁니다."
+        },
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '데스크톱 앱' 유형으로 만든 OAuth 클라이언트의 ID입니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace.md"
+        }
+      ],
+      "safeTools": [
+        "search_gmail_messages",
+        "get_gmail_message_content",
+        "get_gmail_messages_content_batch",
+        "search_drive_files",
+        "get_drive_file_content",
+        "list_calendars",
+        "get_events",
+        "get_doc_content",
+        "read_sheet_values",
+        "get_presentation",
+        "list_tasks",
+        "get_task"
+      ],
+      "note": "Google 공식 서버가 아니라 커뮤니티 서버입니다. Google 계정의 메일·파일에 접근하므로 설정 안내를 끝까지 읽고 쓰세요."
+    },
+    {
+      "id": "google-workspace-readonly",
+      "name": "Google Workspace (읽기 전용)",
+      "summary": "Gmail, 드라이브, 캘린더, 문서, 시트, 슬라이드, 할 일을 읽기만 합니다. 메일을 보내거나 파일을 바꾸지 못합니다.",
+      "description": "읽기 권한만 요청하므로 처음 써 보기에 안전합니다. 설정 방법은 'Google Workspace'와 같습니다.",
+      "category": "Google",
+      "publisher": "taylorwilsdon/google_workspace_mcp (커뮤니티, MIT)",
+      "homepage": "https://github.com/taylorwilsdon/google_workspace_mcp",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace.md",
+      "requires": [
+        "uv"
+      ],
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "workspace-mcp@2.4.2",
+          "--single-user",
+          "--tool-tier",
+          "core",
+          "--tools",
+          "gmail",
+          "drive",
+          "calendar",
+          "docs",
+          "sheets",
+          "slides",
+          "tasks",
+          "--read-only"
+        ],
+        "env": {
+          "GOOGLE_OAUTH_CLIENT_ID": "{client_id}",
+          "GOOGLE_OAUTH_CLIENT_SECRET": "{client_secret}",
+          "USER_GOOGLE_EMAIL": "{email}",
+          "OAUTHLIB_INSECURE_TRANSPORT": "1"
+        }
+      },
+      "inputs": [
+        {
+          "key": "email",
+          "label": "내 Google 계정 이메일",
+          "type": "text",
+          "required": true,
+          "placeholder": "me@gmail.com",
+          "help": "이 계정으로 로그인해 Gmail·드라이브 등을 씁니다."
+        },
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '데스크톱 앱' 유형으로 만든 OAuth 클라이언트의 ID입니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace.md"
+        }
+      ],
+      "safeTools": [
+        "search_gmail_messages",
+        "get_gmail_message_content",
+        "get_gmail_messages_content_batch",
+        "search_drive_files",
+        "get_drive_file_content",
+        "list_calendars",
+        "get_events",
+        "get_doc_content",
+        "read_sheet_values",
+        "get_presentation",
+        "list_tasks",
+        "get_task"
+      ],
+      "note": "Google 공식 서버가 아니라 커뮤니티 서버입니다."
+    },
+    {
       "id": "filesystem",
       "name": "내 PC 파일",
       "summary": "지정한 폴더 안의 파일을 읽고, 찾고, 쓰고, 옮깁니다.",
