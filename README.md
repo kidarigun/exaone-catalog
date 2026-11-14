@@ -28,6 +28,7 @@ https://raw.githubusercontent.com/kidarigun/exaone-catalog/main/catalog.json
 | `install.transport` | `stdio`(내 PC에서 실행) 또는 `http`(원격 URL) |
 | `install.command`, `install.args`, `install.env` | stdio 서버 실행 방법 |
 | `install.url`, `install.headers` | http 서버 주소와 헤더 |
+| `install.oauth` | 원격 서버 로그인: `clientId`, `clientSecret`(`{key}` 사용 가능), `scopes`, `authorizationEndpoint`, `tokenEndpoint`, `extraParams`, `group`. 엔드포인트를 비우면 앱이 서버에서 찾고, `clientId`를 비우면 자동 등록을 시도합니다. 같은 `group`의 서버는 클라이언트 정보와 로그인을 함께 씁니다. 앱의 리디렉션 URI는 `http://localhost:45789/oauth2callback`입니다 |
 | `inputs` | 설치할 때 사용자에게 받을 값. `{key}`로 args·env·url·headers에 끼워 넣습니다 |
 | `safeTools` | 처음부터 승인 없이 실행할 읽기 전용 도구 |
 | `guide` | 처음 설정이 필요한 서버의 단계별 안내 페이지 (예: `docs/google-workspace.md`) — 연결 창에 [설정 안내 열기] 버튼이 나옵니다 |

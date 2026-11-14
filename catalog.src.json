@@ -163,6 +163,434 @@
       "note": "Google 공식 서버가 아니라 커뮤니티 서버입니다."
     },
     {
+      "id": "google-official-gmail",
+      "name": "Gmail (Google 공식)",
+      "summary": "메일을 검색하고 읽고, 라벨을 관리하고, 임시 보관 메일(초안)을 만듭니다.",
+      "description": "연결하면 브라우저가 열려 Google 계정으로 로그인합니다. 여러 Google 서버를 추가해도 클라이언트 정보는 한 번만 넣으면 되고, 새 서버를 추가하면 그 권한을 허락받기 위해 다시 로그인합니다.",
+      "category": "Google 공식 (미리보기)",
+      "publisher": "Google",
+      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://gmailmcp.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [
+            "https://www.googleapis.com/auth/gmail.readonly",
+            "https://www.googleapis.com/auth/gmail.compose"
+          ],
+          "authorizationEndpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+          "tokenEndpoint": "https://oauth2.googleapis.com/token",
+          "extraParams": {
+            "access_type": "offline",
+            "prompt": "consent",
+            "include_granted_scopes": "true"
+          },
+          "group": "google"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '웹 애플리케이션' 유형으로 만든 클라이언트입니다. 두 번째 Google 서버부터는 다시 묻지 않습니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        }
+      ],
+      "safeTools": [],
+      "note": "Google 공식 서버로, 아직 개발자 미리보기입니다. Google Workspace Developer Preview Program 가입과 Google Cloud 설정이 필요합니다. 처음이면 설정 안내를 먼저 보세요."
+    },
+    {
+      "id": "google-official-drive",
+      "name": "Google 드라이브 (Google 공식)",
+      "summary": "드라이브 파일을 검색하고 내용을 읽고, 이 앱으로 만든 파일을 관리합니다.",
+      "description": "연결하면 브라우저가 열려 Google 계정으로 로그인합니다. 여러 Google 서버를 추가해도 클라이언트 정보는 한 번만 넣으면 되고, 새 서버를 추가하면 그 권한을 허락받기 위해 다시 로그인합니다.",
+      "category": "Google 공식 (미리보기)",
+      "publisher": "Google",
+      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://drivemcp.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [
+            "https://www.googleapis.com/auth/drive.readonly",
+            "https://www.googleapis.com/auth/drive.file"
+          ],
+          "authorizationEndpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+          "tokenEndpoint": "https://oauth2.googleapis.com/token",
+          "extraParams": {
+            "access_type": "offline",
+            "prompt": "consent",
+            "include_granted_scopes": "true"
+          },
+          "group": "google"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '웹 애플리케이션' 유형으로 만든 클라이언트입니다. 두 번째 Google 서버부터는 다시 묻지 않습니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        }
+      ],
+      "safeTools": [],
+      "note": "Google 공식 서버로, 아직 개발자 미리보기입니다. Google Workspace Developer Preview Program 가입과 Google Cloud 설정이 필요합니다. 처음이면 설정 안내를 먼저 보세요."
+    },
+    {
+      "id": "google-official-calendar",
+      "name": "Google 캘린더 (Google 공식)",
+      "summary": "캘린더 목록과 일정, 빈 시간을 조회합니다.",
+      "description": "연결하면 브라우저가 열려 Google 계정으로 로그인합니다. 여러 Google 서버를 추가해도 클라이언트 정보는 한 번만 넣으면 되고, 새 서버를 추가하면 그 권한을 허락받기 위해 다시 로그인합니다.",
+      "category": "Google 공식 (미리보기)",
+      "publisher": "Google",
+      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://calendarmcp.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [
+            "https://www.googleapis.com/auth/calendar.calendarlist.readonly",
+            "https://www.googleapis.com/auth/calendar.events.freebusy",
+            "https://www.googleapis.com/auth/calendar.events.readonly"
+          ],
+          "authorizationEndpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+          "tokenEndpoint": "https://oauth2.googleapis.com/token",
+          "extraParams": {
+            "access_type": "offline",
+            "prompt": "consent",
+            "include_granted_scopes": "true"
+          },
+          "group": "google"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '웹 애플리케이션' 유형으로 만든 클라이언트입니다. 두 번째 Google 서버부터는 다시 묻지 않습니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        }
+      ],
+      "safeTools": [],
+      "note": "Google 공식 서버로, 아직 개발자 미리보기입니다. Google Workspace Developer Preview Program 가입과 Google Cloud 설정이 필요합니다. 처음이면 설정 안내를 먼저 보세요."
+    },
+    {
+      "id": "google-official-docs",
+      "name": "Google 문서 (Google 공식)",
+      "summary": "Google 문서를 읽고 만들고 고칩니다.",
+      "description": "연결하면 브라우저가 열려 Google 계정으로 로그인합니다. 여러 Google 서버를 추가해도 클라이언트 정보는 한 번만 넣으면 되고, 새 서버를 추가하면 그 권한을 허락받기 위해 다시 로그인합니다.",
+      "category": "Google 공식 (미리보기)",
+      "publisher": "Google",
+      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://docsmcp.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [
+            "https://www.googleapis.com/auth/drive.readonly",
+            "https://www.googleapis.com/auth/drive.file",
+            "https://www.googleapis.com/auth/documents.readonly",
+            "https://www.googleapis.com/auth/documents"
+          ],
+          "authorizationEndpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+          "tokenEndpoint": "https://oauth2.googleapis.com/token",
+          "extraParams": {
+            "access_type": "offline",
+            "prompt": "consent",
+            "include_granted_scopes": "true"
+          },
+          "group": "google"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '웹 애플리케이션' 유형으로 만든 클라이언트입니다. 두 번째 Google 서버부터는 다시 묻지 않습니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        }
+      ],
+      "safeTools": [],
+      "note": "Google 공식 서버로, 아직 개발자 미리보기입니다. Google Workspace Developer Preview Program 가입과 Google Cloud 설정이 필요합니다. 처음이면 설정 안내를 먼저 보세요."
+    },
+    {
+      "id": "google-official-sheets",
+      "name": "Google 시트 (Google 공식)",
+      "summary": "스프레드시트를 읽고 만들고 값을 고칩니다.",
+      "description": "연결하면 브라우저가 열려 Google 계정으로 로그인합니다. 여러 Google 서버를 추가해도 클라이언트 정보는 한 번만 넣으면 되고, 새 서버를 추가하면 그 권한을 허락받기 위해 다시 로그인합니다.",
+      "category": "Google 공식 (미리보기)",
+      "publisher": "Google",
+      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://sheetsmcp.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [
+            "https://www.googleapis.com/auth/drive.readonly",
+            "https://www.googleapis.com/auth/drive.file",
+            "https://www.googleapis.com/auth/spreadsheets.readonly",
+            "https://www.googleapis.com/auth/spreadsheets"
+          ],
+          "authorizationEndpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+          "tokenEndpoint": "https://oauth2.googleapis.com/token",
+          "extraParams": {
+            "access_type": "offline",
+            "prompt": "consent",
+            "include_granted_scopes": "true"
+          },
+          "group": "google"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '웹 애플리케이션' 유형으로 만든 클라이언트입니다. 두 번째 Google 서버부터는 다시 묻지 않습니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        }
+      ],
+      "safeTools": [],
+      "note": "Google 공식 서버로, 아직 개발자 미리보기입니다. Google Workspace Developer Preview Program 가입과 Google Cloud 설정이 필요합니다. 처음이면 설정 안내를 먼저 보세요."
+    },
+    {
+      "id": "google-official-slides",
+      "name": "Google 슬라이드 (Google 공식)",
+      "summary": "프레젠테이션을 읽고 만들고 고칩니다.",
+      "description": "연결하면 브라우저가 열려 Google 계정으로 로그인합니다. 여러 Google 서버를 추가해도 클라이언트 정보는 한 번만 넣으면 되고, 새 서버를 추가하면 그 권한을 허락받기 위해 다시 로그인합니다.",
+      "category": "Google 공식 (미리보기)",
+      "publisher": "Google",
+      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://slidesmcp.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [
+            "https://www.googleapis.com/auth/drive.readonly",
+            "https://www.googleapis.com/auth/drive.file",
+            "https://www.googleapis.com/auth/presentations.readonly",
+            "https://www.googleapis.com/auth/presentations"
+          ],
+          "authorizationEndpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+          "tokenEndpoint": "https://oauth2.googleapis.com/token",
+          "extraParams": {
+            "access_type": "offline",
+            "prompt": "consent",
+            "include_granted_scopes": "true"
+          },
+          "group": "google"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '웹 애플리케이션' 유형으로 만든 클라이언트입니다. 두 번째 Google 서버부터는 다시 묻지 않습니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        }
+      ],
+      "safeTools": [],
+      "note": "Google 공식 서버로, 아직 개발자 미리보기입니다. Google Workspace Developer Preview Program 가입과 Google Cloud 설정이 필요합니다. 처음이면 설정 안내를 먼저 보세요."
+    },
+    {
+      "id": "google-official-chat",
+      "name": "Google Chat (Google 공식)",
+      "summary": "스페이스와 메시지를 조회하고 메시지를 보냅니다.",
+      "description": "연결하면 브라우저가 열려 Google 계정으로 로그인합니다. 여러 Google 서버를 추가해도 클라이언트 정보는 한 번만 넣으면 되고, 새 서버를 추가하면 그 권한을 허락받기 위해 다시 로그인합니다.",
+      "category": "Google 공식 (미리보기)",
+      "publisher": "Google",
+      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://chatmcp.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [
+            "https://www.googleapis.com/auth/chat.spaces.readonly",
+            "https://www.googleapis.com/auth/chat.memberships.readonly",
+            "https://www.googleapis.com/auth/chat.messages.readonly",
+            "https://www.googleapis.com/auth/chat.messages.create",
+            "https://www.googleapis.com/auth/chat.users.readstate",
+            "https://www.googleapis.com/auth/chat.users.spacesettings"
+          ],
+          "authorizationEndpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+          "tokenEndpoint": "https://oauth2.googleapis.com/token",
+          "extraParams": {
+            "access_type": "offline",
+            "prompt": "consent",
+            "include_granted_scopes": "true"
+          },
+          "group": "google"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '웹 애플리케이션' 유형으로 만든 클라이언트입니다. 두 번째 Google 서버부터는 다시 묻지 않습니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        }
+      ],
+      "safeTools": [],
+      "note": "Google 공식 서버로, 아직 개발자 미리보기입니다. Google Workspace Developer Preview Program 가입과 Google Cloud 설정이 필요합니다. 처음이면 설정 안내를 먼저 보세요. 회사·학교 Google Workspace 계정에서만 쓸 수 있고, Google Cloud에 Chat 앱 설정이 필요합니다."
+    },
+    {
+      "id": "google-official-people",
+      "name": "Google 연락처·디렉터리 (Google 공식)",
+      "summary": "연락처와 조직 디렉터리에서 사람을 찾습니다.",
+      "description": "연결하면 브라우저가 열려 Google 계정으로 로그인합니다. 여러 Google 서버를 추가해도 클라이언트 정보는 한 번만 넣으면 되고, 새 서버를 추가하면 그 권한을 허락받기 위해 다시 로그인합니다.",
+      "category": "Google 공식 (미리보기)",
+      "publisher": "Google",
+      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://people.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [
+            "https://www.googleapis.com/auth/directory.readonly",
+            "https://www.googleapis.com/auth/userinfo.profile",
+            "https://www.googleapis.com/auth/contacts.readonly"
+          ],
+          "authorizationEndpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+          "tokenEndpoint": "https://oauth2.googleapis.com/token",
+          "extraParams": {
+            "access_type": "offline",
+            "prompt": "consent",
+            "include_granted_scopes": "true"
+          },
+          "group": "google"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "OAuth 클라이언트 ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "1234-abcd.apps.googleusercontent.com",
+          "help": "Google Cloud에서 '웹 애플리케이션' 유형으로 만든 클라이언트입니다. 두 번째 Google 서버부터는 다시 묻지 않습니다.",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth 클라이언트 보안 비밀번호",
+          "type": "secret",
+          "required": true,
+          "placeholder": "GOCSPX-...",
+          "helpUrl": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/google-workspace-official.md"
+        }
+      ],
+      "safeTools": [],
+      "note": "Google 공식 서버로, 아직 개발자 미리보기입니다. Google Workspace Developer Preview Program 가입과 Google Cloud 설정이 필요합니다. 처음이면 설정 안내를 먼저 보세요. 조직 디렉터리는 회사·학교 Google Workspace 계정에서만 조회됩니다."
+    },
+    {
       "id": "filesystem",
       "name": "내 PC 파일",
       "summary": "지정한 폴더 안의 파일을 읽고, 찾고, 쓰고, 옮깁니다.",

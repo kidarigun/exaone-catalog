@@ -3,6 +3,8 @@
 EXAONE Desktop에서 Gmail, Google 드라이브, 캘린더, 문서, 시트, 슬라이드, 할 일을 쓰기 위한 설정입니다.
 처음 한 번만 하면 되고 10분쯤 걸립니다. 비용은 들지 않습니다.
 
+> Google 공식 서버(개발자 미리보기)를 쓰려면 [공식 서버 안내](google-workspace-official.md)를 보세요.
+>
 > 이 연결은 Google 공식 서버가 아니라 커뮤니티 오픈소스 서버([taylorwilsdon/google_workspace_mcp](https://github.com/taylorwilsdon/google_workspace_mcp), MIT)를 씁니다.
 > 서버는 **내 PC에서만** 실행되고, 로그인 정보도 내 PC에 저장됩니다.
 
