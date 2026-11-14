@@ -117,7 +117,7 @@
       "safeTools": [
         "read_wiki_structure",
         "read_wiki_contents",
-        "ask_question"
+        "ask_wiki_question"
       ]
     },
     {
@@ -148,7 +148,7 @@
       ],
       "safeTools": [
         "resolve-library-id",
-        "get-library-docs"
+        "query-docs"
       ]
     },
     {
