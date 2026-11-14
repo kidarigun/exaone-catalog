@@ -43,5 +43,13 @@ npm 패키지는 `@2.3.0`처럼 **버전을 고정**하세요. 패키지가 바�
 | `id`, `name`, `summary`, `category`, `publisher` | 화면 표시용 |
 | `path` | Skill 폴더 (`skills/<id>`) — `build.py`가 zip으로 묶고 `download`, `sha256`, `size`, `files`, `skillName`을 채웁니다 |
 | `requires` | 필요한 프로그램 (예: 스크립트가 있으면 `python`) |
+| `source` | 다른 GitHub 저장소의 Skill을 옮겨 올 때: `{"repo": "anthropics/skills", "commit": "<40자리 커밋>", "path": "skills/docx"}` — `path` 대신 씁니다 |
+| `license`, `note` | 라이선스 표시와 "이 앱에서 알아 둘 점" 안내 |
+
+### Claude 공식 Skill
+
+`anthropics/skills` 저장소의 Skill 18개를 커밋 `1780c5e`로 고정해 옮겨 왔습니다 (모두 Apache-2.0).
+zip에는 원본 LICENSE.txt와 함께 출처를 적은 `SOURCE.md`, 저장소의 `THIRD_PARTY_NOTICES.md`를 넣습니다.
+LICENSE 파일이 없는 `doc-coauthoring`은 넣지 않았습니다. 원본을 새 버전으로 바꾸려면 `commit`만 바꾸고 `build.py`를 다시 실행하세요.
 
 앱은 zip을 받은 뒤 sha256이 맞을 때만 설치합니다.

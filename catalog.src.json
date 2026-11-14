@@ -11,16 +11,37 @@
       "category": "파일",
       "publisher": "MCP 공식 예제 서버",
       "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
-      "requires": ["node"],
+      "requires": [
+        "node"
+      ],
       "install": {
         "transport": "stdio",
         "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-filesystem@2.3.0", "{folder}"]
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem@2.3.0",
+          "{folder}"
+        ]
       },
       "inputs": [
-        { "key": "folder", "label": "엑사원이 쓸 폴더", "type": "folder", "required": true, "help": "이 폴더와 그 안의 하위 폴더만 접근할 수 있습니다." }
+        {
+          "key": "folder",
+          "label": "엑사원이 쓸 폴더",
+          "type": "folder",
+          "required": true,
+          "help": "이 폴더와 그 안의 하위 폴더만 접근할 수 있습니다."
+        }
       ],
-      "safeTools": ["read_text_file", "read_multiple_files", "list_directory", "list_directory_with_sizes", "directory_tree", "search_files", "get_file_info", "list_allowed_directories"]
+      "safeTools": [
+        "read_text_file",
+        "read_multiple_files",
+        "list_directory",
+        "list_directory_with_sizes",
+        "directory_tree",
+        "search_files",
+        "get_file_info",
+        "list_allowed_directories"
+      ]
     },
     {
       "id": "memory",
@@ -30,17 +51,34 @@
       "category": "생산성",
       "publisher": "MCP 공식 예제 서버",
       "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
-      "requires": ["node"],
+      "requires": [
+        "node"
+      ],
       "install": {
         "transport": "stdio",
         "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-memory@2.1.1"],
-        "env": { "MEMORY_FILE_PATH": "{memory_file}" }
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory@2.1.1"
+        ],
+        "env": {
+          "MEMORY_FILE_PATH": "{memory_file}"
+        }
       },
       "inputs": [
-        { "key": "memory_file", "label": "저장 파일 경로 (선택)", "type": "text", "required": false, "placeholder": "C:\\Users\\me\\Documents\\exaone-memory.jsonl" }
+        {
+          "key": "memory_file",
+          "label": "저장 파일 경로 (선택)",
+          "type": "text",
+          "required": false,
+          "placeholder": "C:\\Users\\me\\Documents\\exaone-memory.jsonl"
+        }
       ],
-      "safeTools": ["read_graph", "search_nodes", "open_nodes"]
+      "safeTools": [
+        "read_graph",
+        "search_nodes",
+        "open_nodes"
+      ]
     },
     {
       "id": "sequential-thinking",
@@ -49,13 +87,20 @@
       "category": "생각 도구",
       "publisher": "MCP 공식 예제 서버",
       "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
-      "requires": ["node"],
+      "requires": [
+        "node"
+      ],
       "install": {
         "transport": "stdio",
         "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-sequential-thinking@2.1.1"]
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking@2.1.1"
+        ]
       },
-      "safeTools": ["sequentialthinking"]
+      "safeTools": [
+        "sequentialthinking"
+      ]
     },
     {
       "id": "deepwiki",
@@ -65,8 +110,15 @@
       "publisher": "Cognition (DeepWiki)",
       "homepage": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
       "requires": [],
-      "install": { "transport": "http", "url": "https://mcp.deepwiki.com/mcp" },
-      "safeTools": ["read_wiki_structure", "read_wiki_contents", "ask_wiki_question"]
+      "install": {
+        "transport": "http",
+        "url": "https://mcp.deepwiki.com/mcp"
+      },
+      "safeTools": [
+        "read_wiki_structure",
+        "read_wiki_contents",
+        "ask_wiki_question"
+      ]
     },
     {
       "id": "context7",
@@ -80,12 +132,24 @@
       "install": {
         "transport": "http",
         "url": "https://mcp.context7.com/mcp",
-        "headers": { "CONTEXT7_API_KEY": "{api_key}" }
+        "headers": {
+          "CONTEXT7_API_KEY": "{api_key}"
+        }
       },
       "inputs": [
-        { "key": "api_key", "label": "API 키 (선택)", "type": "secret", "required": false, "help": "context7.com에서 무료로 발급받을 수 있습니다.", "helpUrl": "https://context7.com/dashboard" }
+        {
+          "key": "api_key",
+          "label": "API 키 (선택)",
+          "type": "secret",
+          "required": false,
+          "help": "context7.com에서 무료로 발급받을 수 있습니다.",
+          "helpUrl": "https://context7.com/dashboard"
+        }
       ],
-      "safeTools": ["resolve-library-id", "query-docs"]
+      "safeTools": [
+        "resolve-library-id",
+        "query-docs"
+      ]
     },
     {
       "id": "github",
@@ -99,10 +163,20 @@
       "install": {
         "transport": "http",
         "url": "https://api.githubcopilot.com/mcp/",
-        "headers": { "Authorization": "Bearer {token}" }
+        "headers": {
+          "Authorization": "Bearer {token}"
+        }
       },
       "inputs": [
-        { "key": "token", "label": "GitHub 개인 액세스 토큰", "type": "secret", "required": true, "placeholder": "github_pat_...", "help": "GitHub 설정 → Developer settings → Personal access tokens에서 만들 수 있습니다.", "helpUrl": "https://github.com/settings/personal-access-tokens" }
+        {
+          "key": "token",
+          "label": "GitHub 개인 액세스 토큰",
+          "type": "secret",
+          "required": true,
+          "placeholder": "github_pat_...",
+          "help": "GitHub 설정 → Developer settings → Personal access tokens에서 만들 수 있습니다.",
+          "helpUrl": "https://github.com/settings/personal-access-tokens"
+        }
       ],
       "safeTools": []
     },
@@ -113,13 +187,21 @@
       "category": "생산성",
       "publisher": "MCP 공식 예제 서버",
       "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
-      "requires": ["uv"],
+      "requires": [
+        "uv"
+      ],
       "install": {
         "transport": "stdio",
         "command": "uvx",
-        "args": ["mcp-server-time", "--local-timezone=Asia/Seoul"]
+        "args": [
+          "mcp-server-time",
+          "--local-timezone=Asia/Seoul"
+        ]
       },
-      "safeTools": ["get_current_time", "convert_time"]
+      "safeTools": [
+        "get_current_time",
+        "convert_time"
+      ]
     },
     {
       "id": "fetch",
@@ -128,8 +210,16 @@
       "category": "웹",
       "publisher": "MCP 공식 예제 서버",
       "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
-      "requires": ["uv"],
-      "install": { "transport": "stdio", "command": "uvx", "args": ["mcp-server-fetch"] },
+      "requires": [
+        "uv"
+      ],
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "mcp-server-fetch"
+        ]
+      },
       "safeTools": []
     }
   ],
@@ -165,7 +255,297 @@
       "category": "데이터",
       "publisher": "EXAONE Desktop 예제",
       "path": "skills/excel-chart",
-      "requires": ["python"]
+      "requires": [
+        "python"
+      ]
+    },
+    {
+      "id": "anthropic-docx",
+      "name": "Word 문서 (고급)",
+      "summary": "Word 문서를 만들고 읽고 고칩니다. 목차·머리글·변경 내용 추적 같은 고급 기능까지 다룹니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/docx",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/docx"
+      },
+      "requires": [
+        "python"
+      ],
+      "note": "Claude의 실행 환경(bash, LibreOffice 등)을 전제로 쓰인 부분이 있어 이 앱에서는 일부만 동작할 수 있습니다. 간단한 Word 문서는 앱의 기본 기능이 더 안정적입니다."
+    },
+    {
+      "id": "anthropic-xlsx",
+      "name": "엑셀 (고급)",
+      "summary": "엑셀 수식·서식·차트, 데이터 정리와 변환을 다룹니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/xlsx",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/xlsx"
+      },
+      "requires": [
+        "python"
+      ],
+      "note": "Claude의 실행 환경(bash, LibreOffice 등)을 전제로 쓰인 부분이 있어 이 앱에서는 일부만 동작할 수 있습니다. 수식 재계산에는 LibreOffice가 필요합니다."
+    },
+    {
+      "id": "anthropic-pptx",
+      "name": "PowerPoint (고급)",
+      "summary": "PowerPoint 발표 자료를 만들고 읽고 고칩니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/pptx",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/pptx"
+      },
+      "requires": [
+        "python",
+        "node"
+      ],
+      "note": "Claude의 실행 환경(bash, LibreOffice 등)을 전제로 쓰인 부분이 있어 이 앱에서는 일부만 동작할 수 있습니다."
+    },
+    {
+      "id": "anthropic-pdf",
+      "name": "PDF 다루기",
+      "summary": "PDF에서 글·표 추출, 합치기·나누기, 양식 채우기, 새 PDF 만들기를 합니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/pdf",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/pdf"
+      },
+      "requires": [
+        "python"
+      ],
+      "note": "pypdf 등 Python 패키지가 필요합니다. 스크립트 실행 중 패키지가 없다고 나오면 [실행] 창에서 설치하세요."
+    },
+    {
+      "id": "anthropic-internal-comms",
+      "name": "사내 커뮤니케이션",
+      "summary": "현황 보고, 경영진 보고, 사내 뉴스레터, FAQ, 장애 보고서 같은 사내 공지를 정해진 형식으로 씁니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/internal-comms",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/internal-comms"
+      }
+    },
+    {
+      "id": "anthropic-theme-factory",
+      "name": "테마 공장",
+      "summary": "슬라이드·문서·웹 페이지에 적용할 10가지 테마(색·글꼴)를 고르거나 새 테마를 만듭니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/theme-factory",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/theme-factory"
+      }
+    },
+    {
+      "id": "anthropic-frontend-design",
+      "name": "프런트엔드 디자인",
+      "summary": "웹·앱 화면의 디자인 방향(글꼴, 색, 배치)을 정해 뻔하지 않은 UI를 만들도록 돕습니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/frontend-design",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/frontend-design"
+      }
+    },
+    {
+      "id": "anthropic-canvas-design",
+      "name": "캔버스 디자인",
+      "summary": "포스터·아트워크 같은 그림을 PNG/PDF로 디자인합니다. 글꼴이 함께 들어 있어 파일이 큽니다(약 5MB).",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/canvas-design",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/canvas-design"
+      },
+      "requires": [
+        "python"
+      ],
+      "note": "Python 그림 라이브러리(Pillow, reportlab 등)가 필요합니다."
+    },
+    {
+      "id": "anthropic-algorithmic-art",
+      "name": "알고리즘 아트",
+      "summary": "p5.js로 무작위성과 규칙을 이용한 생성 예술(HTML)을 만듭니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/algorithmic-art",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/algorithmic-art"
+      }
+    },
+    {
+      "id": "anthropic-brand-guidelines",
+      "name": "Anthropic 브랜드 가이드",
+      "summary": "결과물에 Anthropic의 공식 브랜드 색과 글꼴을 적용합니다. 회사 브랜드 Skill을 만들 때 예시로 좋습니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/brand-guidelines",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/brand-guidelines"
+      }
+    },
+    {
+      "id": "anthropic-slack-gif-creator",
+      "name": "Slack GIF 만들기",
+      "summary": "Slack에 올리기 좋은 크기·용량의 움직이는 GIF를 만듭니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/slack-gif-creator",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/slack-gif-creator"
+      },
+      "requires": [
+        "python"
+      ],
+      "note": "Pillow 등 Python 패키지가 필요합니다."
+    },
+    {
+      "id": "anthropic-mcp-builder",
+      "name": "MCP 서버 만들기",
+      "summary": "외부 서비스를 연결하는 MCP 서버를 Python(FastMCP)이나 TypeScript로 만드는 방법을 안내합니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/mcp-builder",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/mcp-builder"
+      }
+    },
+    {
+      "id": "anthropic-skill-creator",
+      "name": "Skill 만들기",
+      "summary": "새 Skill을 만들고 고치고, 설명이 잘 작동하는지 평가하는 방법을 안내합니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/skill-creator"
+      },
+      "note": "평가·벤치마크 기능은 Claude Code 전용 도구를 써서 이 앱에서는 동작하지 않습니다. Skill 작성 안내는 그대로 쓸 수 있습니다."
+    },
+    {
+      "id": "anthropic-webapp-testing",
+      "name": "웹앱 테스트",
+      "summary": "Playwright로 내 PC에서 실행 중인 웹앱을 조작하고 스크린샷·로그를 확인합니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/webapp-testing",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/webapp-testing"
+      },
+      "requires": [
+        "python"
+      ],
+      "note": "Python 패키지 playwright와 브라우저 설치가 필요합니다."
+    },
+    {
+      "id": "anthropic-web-artifacts-builder",
+      "name": "웹 아티팩트 만들기",
+      "summary": "React·Tailwind·shadcn/ui로 여러 화면을 가진 웹 페이지를 만듭니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/web-artifacts-builder",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/web-artifacts-builder"
+      },
+      "requires": [
+        "node"
+      ],
+      "note": "bash 스크립트로 프로젝트를 만드는 방식이라 Windows에서는 그대로 실행되지 않습니다."
+    },
+    {
+      "id": "anthropic-claude-api",
+      "name": "Claude API 참고서",
+      "summary": "Claude API·Anthropic SDK 사용법(모델, 스트리밍, 도구 사용, 캐싱 등) 개발자 참고 자료입니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/claude-api",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/claude-api"
+      },
+      "note": "Claude API로 프로그램을 만드는 개발자용입니다."
+    },
+    {
+      "id": "anthropic-discernment-nudge",
+      "name": "검토 질문 덧붙이기",
+      "summary": "조언·초안·분석을 답한 뒤, 사실 확인과 가정 점검을 돕는 후속 질문 2~3개를 덧붙입니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/discernment-nudge",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/discernment-nudge"
+      }
+    },
+    {
+      "id": "anthropic-academy-guide",
+      "name": "Claude Academy 안내",
+      "summary": "Claude 사용법 질문에 Claude Academy의 강좌와 자료를 추천합니다.",
+      "category": "Claude 공식",
+      "publisher": "Anthropic (anthropics/skills)",
+      "homepage": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/academy-guide",
+      "license": "Apache-2.0",
+      "source": {
+        "repo": "anthropics/skills",
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+        "path": "skills/academy-guide"
+      },
+      "note": "Claude 제품 사용법 안내용이라 EXAONE에서는 쓸모가 적습니다."
     }
   ]
 }
