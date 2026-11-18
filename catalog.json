@@ -1587,7 +1587,422 @@
         "SOURCE.md",
         "THIRD_PARTY_NOTICES.md"
       ]
+    },
+    {
+      "id": "superpowers-brainstorming",
+      "name": "브레인스토밍·설계 (Brainstorming)",
+      "summary": "코드를 바로 쓰지 않고 질문으로 의도와 요구사항을 먼저 파악한 뒤, 설계안을 정리해 확인받습니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/brainstorming",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/brainstorming"
+      },
+      "note": "대화형 설계 절차는 그대로 동작합니다. 브라우저 시각 도우미(visual companion) 스크립트는 Claude Code 환경을 전제로 해 이 앱에서는 쓰이지 않습니다.",
+      "skillName": "brainstorming",
+      "download": "dist/superpowers-brainstorming.zip",
+      "sha256": "f0f2776df8c570386d7ece1055a0aaf1cab9fa61e8c797f51cb9651a739ab282",
+      "size": 32089,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md",
+        "builder-check-prompt.md",
+        "scripts/frame-template.html",
+        "scripts/helper.js",
+        "scripts/server.cjs",
+        "scripts/start-server.sh",
+        "scripts/stop-server.sh",
+        "visual-companion.md"
+      ]
+    },
+    {
+      "id": "superpowers-writing-plans",
+      "name": "구현 계획 작성 (Writing Plans)",
+      "summary": "설계나 요구사항을 바탕으로 수정할 파일, 코드, 테스트, 검증 단계를 작은 작업 단위의 계획서로 작성합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/writing-plans",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/writing-plans"
+      },
+      "skillName": "writing-plans",
+      "download": "dist/superpowers-writing-plans.zip",
+      "sha256": "a106ce23aee5c1ee16a532bf18d4f9db5f246bb2bec7e7bac4fb579fa8589fed",
+      "size": 5731,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md"
+      ]
+    },
+    {
+      "id": "superpowers-executing-plans",
+      "name": "구현 계획 실행 (Executing Plans)",
+      "summary": "작성된 구현 계획서를 검토한 뒤, 각 단계를 순서대로 실행하고 검증 결과를 보고합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/executing-plans",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/executing-plans"
+      },
+      "skillName": "executing-plans",
+      "download": "dist/superpowers-executing-plans.zip",
+      "sha256": "5b69983fc47ca0a610e33fba35bb5ee7092ac2e3091b6b84adec04143e3c98ab",
+      "size": 10188,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md",
+        "scripts/task-done",
+        "scripts/task-start"
+      ]
+    },
+    {
+      "id": "superpowers-test-driven-development",
+      "name": "테스트 주도 개발 (TDD)",
+      "summary": "구현 코드를 쓰기 전에 실패하는 테스트를 먼저 작성하고, 통과시킨 뒤 다듬는(Red-Green-Refactor) 절차를 따릅니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/test-driven-development",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/test-driven-development"
+      },
+      "skillName": "test-driven-development",
+      "download": "dist/superpowers-test-driven-development.zip",
+      "sha256": "ee0a60846e3c059332c42836a6f1d1eda6d30e4078b65e457ebcb15598ef3334",
+      "size": 9328,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md",
+        "writing-good-tests.md"
+      ]
+    },
+    {
+      "id": "superpowers-systematic-debugging",
+      "name": "체계적 디버깅 (Systematic Debugging)",
+      "summary": "버그나 테스트 실패가 생겼을 때 추측으로 고치지 않고, 근본 원인을 먼저 추적·확인한 뒤 수정합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/systematic-debugging",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/systematic-debugging"
+      },
+      "skillName": "systematic-debugging",
+      "download": "dist/superpowers-systematic-debugging.zip",
+      "sha256": "4d6ae0b399e831082b6561d1e0313c04a806410ca531efc5b273c7dcfc16853b",
+      "size": 14117,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md",
+        "condition-based-waiting-example.ts",
+        "condition-based-waiting.md",
+        "defense-in-depth.md",
+        "find-polluter.sh",
+        "root-cause-tracing.md"
+      ]
+    },
+    {
+      "id": "superpowers-verification-before-completion",
+      "name": "완료 전 검증 (Verification Before Completion)",
+      "summary": "작업을 끝냈다고 답하기 전에 실제로 빌드·테스트·실행 명령을 돌려 결과를 확인하게 합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/verification-before-completion",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/verification-before-completion"
+      },
+      "skillName": "verification-before-completion",
+      "download": "dist/superpowers-verification-before-completion.zip",
+      "sha256": "b5345c8b9cfd063f9760fb8750baac846b4c73decced0cb67ec4a4a08758b0a3",
+      "size": 3174,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md"
+      ]
+    },
+    {
+      "id": "superpowers-requesting-code-review",
+      "name": "코드 리뷰 요청 준비 (Requesting Code Review)",
+      "summary": "구현을 마친 뒤 변경 배경, 설계 의도, 중점 확인 사항을 정리해 코드 리뷰를 준비합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/requesting-code-review",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/requesting-code-review"
+      },
+      "skillName": "requesting-code-review",
+      "download": "dist/superpowers-requesting-code-review.zip",
+      "sha256": "3d3901c98e8a994c5babb541e6dbb7335009886ea82d35850ef3d0714abfc7cd",
+      "size": 5919,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md",
+        "code-reviewer.md"
+      ]
+    },
+    {
+      "id": "superpowers-receiving-code-review",
+      "name": "코드 리뷰 반영 (Receiving Code Review)",
+      "summary": "코드 리뷰 피드백을 받았을 때 기술적 타당성을 먼저 검증하고 체계적으로 수정·반영합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/receiving-code-review",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/receiving-code-review"
+      },
+      "skillName": "receiving-code-review",
+      "download": "dist/superpowers-receiving-code-review.zip",
+      "sha256": "44aede14f83e4018b475229f8488fed2314f69adf9908548a5a7d11e18624332",
+      "size": 4128,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md"
+      ]
+    },
+    {
+      "id": "superpowers-using-git-worktrees",
+      "name": "Git 워크트리 활용 (Using Git Worktrees)",
+      "summary": "Git worktree로 격리된 작업 폴더를 만들어 여러 브랜치를 동시에 안전하게 작업하는 절차를 안내합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/using-git-worktrees",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/using-git-worktrees"
+      },
+      "skillName": "using-git-worktrees",
+      "download": "dist/superpowers-using-git-worktrees.zip",
+      "sha256": "6985490ee89014c7823e79166049e232e2fe307cd1835f6da5f538b96ad0f5f4",
+      "size": 4134,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md"
+      ]
+    },
+    {
+      "id": "superpowers-finishing-a-development-branch",
+      "name": "개발 브랜치 마무리 (Finishing a Branch)",
+      "summary": "기능 개발을 마친 뒤 테스트 통과 여부를 확인하고 병합(Merge)·PR·정리 방법을 결정합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/finishing-a-development-branch",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/finishing-a-development-branch"
+      },
+      "skillName": "finishing-a-development-branch",
+      "download": "dist/superpowers-finishing-a-development-branch.zip",
+      "sha256": "b8c372c5edfb2f56c8711880533ae454e7832d01540e9834c834a73e173d21da",
+      "size": 4671,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md"
+      ]
+    },
+    {
+      "id": "superpowers-subagent-driven-development",
+      "name": "하위 에이전트 기반 개발 (Subagent-Driven Development)",
+      "summary": "계획서의 각 작업을 독립 단위로 나누고, 사양 준수와 코드 품질의 2단계 검토를 거쳐 진행합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/subagent-driven-development",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/subagent-driven-development"
+      },
+      "note": "하위 에이전트(subagent) 실행 도구가 있는 에이전트 환경을 전제로 쓰여 있어, 이 앱에서는 한 대화 안에서 단계별 구현·검토 지침으로 참고됩니다.",
+      "skillName": "subagent-driven-development",
+      "download": "dist/superpowers-subagent-driven-development.zip",
+      "sha256": "d095ed5e73791a52933dc42ed782d6f9359460c36dd9065b8466e87d27aba5b9",
+      "size": 32650,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md",
+        "implementer-prompt.md",
+        "re-review-prompt.md",
+        "references/batching.md",
+        "references/cannot-verify.md",
+        "references/final-review.md",
+        "references/fix-loop.md",
+        "references/handling-reports.md",
+        "references/preflight.md",
+        "references/resuming.md",
+        "scripts/review-package",
+        "scripts/sdd-repo",
+        "scripts/sdd-workspace",
+        "scripts/task-brief",
+        "task-reviewer-prompt.md"
+      ]
+    },
+    {
+      "id": "superpowers-dispatching-parallel-agents",
+      "name": "병렬 에이전트 분배 (Dispatching Parallel Agents)",
+      "summary": "서로 독립적인 여러 문제나 작업을 분리해 병렬로 조사·해결하는 기준과 절차를 안내합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/dispatching-parallel-agents",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/dispatching-parallel-agents"
+      },
+      "note": "하위 에이전트(subagent) 실행 도구가 있는 에이전트 환경을 전제로 쓰여 있습니다.",
+      "skillName": "dispatching-parallel-agents",
+      "download": "dist/superpowers-dispatching-parallel-agents.zip",
+      "sha256": "f93550722af7d97aec51f55b27aeff948a6e101bdef36e70ac03f87f6e1b7385",
+      "size": 3879,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md"
+      ]
+    },
+    {
+      "id": "superpowers-writing-skills",
+      "name": "Skill 작성법 (Writing Skills)",
+      "summary": "에이전트가 잘 찾고 따를 수 있는 새 Skill(SKILL.md)을 설계·작성·점검하는 방법을 안내합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/writing-skills",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/writing-skills"
+      },
+      "skillName": "writing-skills",
+      "download": "dist/superpowers-writing-skills.zip",
+      "sha256": "9237aeecc5e94ab08620455cc2a5c4669192ac1ed66b067043776b5da557748b",
+      "size": 44196,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md",
+        "references/CLAUDE_MD_TESTING.md",
+        "references/anthropic-best-practices.md",
+        "references/bulletproofing.md",
+        "references/discovery.md",
+        "references/flowcharts.md",
+        "references/graphviz-conventions.dot",
+        "references/persuasion-principles.md",
+        "references/testing-skills-with-subagents.md",
+        "render-graphs.js"
+      ]
+    },
+    {
+      "id": "superpowers-using-superpowers",
+      "name": "Superpowers 사용 규칙 (Using Superpowers)",
+      "summary": "대화를 시작할 때 요청에 맞는 Skill이 있는지 먼저 확인하고 읽어 따르도록 하는 기본 규칙입니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/using-superpowers",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/using-superpowers"
+      },
+      "note": "모든 요청마다 먼저 읽으라고 지시하므로, 켜 두면 K-EXAONE API 하루 호출 수를 더 쓸 수 있습니다. 필요한 Superpowers Skill만 골라 켜 두는 것을 권장합니다.",
+      "skillName": "using-superpowers",
+      "download": "dist/superpowers-using-superpowers.zip",
+      "sha256": "a4d7ae359a5ef4b9f78a0b7412591a5a6d271725211c38efc664089e6417d910",
+      "size": 12466,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md",
+        "references/antigravity-tools.md",
+        "references/claude-code-tools.md",
+        "references/codex-tools.md",
+        "references/gemini-tools.md",
+        "references/hermes-tools.md",
+        "references/muse-tools.md",
+        "references/pi-tools.md"
+      ]
+    },
+    {
+      "id": "superpowers-diagnosing-superpowers",
+      "name": "Superpowers 세션 진단 (Diagnosing Superpowers)",
+      "summary": "에이전트 작업 기록(세션 로그)을 근거로 반복 작업, 계획 이탈, 지연 원인을 분석해 보고서로 정리합니다.",
+      "category": "Superpowers",
+      "publisher": "Jesse Vincent (obra/superpowers)",
+      "homepage": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/diagnosing-superpowers",
+      "license": "MIT",
+      "source": {
+        "repo": "obra/superpowers",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "path": "skills/diagnosing-superpowers"
+      },
+      "note": "Claude Code·Codex 등의 세션 로그 형식을 기준으로 작성되어 있습니다.",
+      "skillName": "diagnosing-superpowers",
+      "download": "dist/superpowers-diagnosing-superpowers.zip",
+      "sha256": "a86fdab09363ed8cf2d5d919d0171724f3ec3531d3142d3bb6c535d6fd418468",
+      "size": 25667,
+      "files": [
+        "LICENSE",
+        "SKILL.md",
+        "SOURCE.md",
+        "prompts/analyst-common.md",
+        "prompts/cost-and-time.md",
+        "prompts/plan-adherence.md",
+        "prompts/quality-evidence.md",
+        "prompts/repeated-work.md",
+        "prompts/request-conflicts.md",
+        "prompts/scrub-audit.md",
+        "prompts/scrub.md",
+        "prompts/similar-session.md",
+        "prompts/skill-timeline.md",
+        "prompts/stumbles.md",
+        "references/context-safety.md",
+        "references/github-issues.md",
+        "references/redaction-policy.md",
+        "references/session-discovery.md",
+        "templates/bundle-README.md",
+        "templates/case.md",
+        "templates/issue.md",
+        "templates/report.md"
+      ]
     }
   ],
-  "updated": "2026-11-15"
+  "updated": "2026-11-18"
 }

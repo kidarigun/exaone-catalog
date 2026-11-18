@@ -86,8 +86,18 @@ def main():
         if src:
             repo_dir = fetch_source(src["repo"], src["commit"])
             folder = repo_dir / src["path"]
-            if not (folder / "LICENSE.txt").exists() and not (folder / "LICENSE").exists():
-                print(f"[오류] {skill['id']}: 원본 폴더에 LICENSE가 없어 다시 배포할 수 없습니다.")
+            if (folder / "LICENSE.txt").exists():
+                license_file = "LICENSE.txt"
+            elif (folder / "LICENSE").exists():
+                license_file = "LICENSE"
+            elif (repo_dir / "LICENSE").exists():
+                license_file = "LICENSE"
+                extra["LICENSE"] = (repo_dir / "LICENSE").read_bytes()
+            elif (repo_dir / "LICENSE.txt").exists():
+                license_file = "LICENSE.txt"
+                extra["LICENSE.txt"] = (repo_dir / "LICENSE.txt").read_bytes()
+            else:
+                print(f"[오류] {skill['id']}: 원본 폴더나 저장소 루트에 LICENSE가 없어 다시 배포할 수 없습니다.")
                 ok = False
                 continue
             extra["SOURCE.md"] = "\n".join([
@@ -96,7 +106,7 @@ def main():
                 f"이 Skill은 {src['repo']} 저장소의 `{src['path']}`를 그대로 옮긴 것입니다.",
                 "",
                 f"- 원본: https://github.com/{src['repo']}/tree/{src['commit']}/{src['path']}",
-                f"- 라이선스: {skill.get('license', '원본 LICENSE 파일 참고')} (LICENSE.txt)",
+                f"- 라이선스: {skill.get('license', '원본 LICENSE 파일 참고')} ({license_file})",
                 "- 내용은 바꾸지 않았습니다.",
                 "",
             ]).encode("utf-8")

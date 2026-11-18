@@ -57,4 +57,9 @@ npm 패키지는 `@2.3.0`처럼 **버전을 고정**하세요. 패키지가 바�
 zip에는 원본 LICENSE.txt와 함께 출처를 적은 `SOURCE.md`, 저장소의 `THIRD_PARTY_NOTICES.md`를 넣습니다.
 LICENSE 파일이 없는 `doc-coauthoring`은 넣지 않았습니다. 원본을 새 버전으로 바꾸려면 `commit`만 바꾸고 `build.py`를 다시 실행하세요.
 
+### Superpowers Skill
+
+`obra/superpowers` 저장소의 Skill 15개를 커밋 `22f0b46`으로 고정해 옮겨 왔습니다 (모두 MIT).
+zip에는 저장소 루트의 원본 `LICENSE`와 함께 출처를 적은 `SOURCE.md`를 넣습니다.
+
 앱은 zip을 받은 뒤 sha256이 맞을 때만 설치합니다.
