@@ -591,8 +591,231 @@
       "note": "Google 공식 서버로, 아직 개발자 미리보기입니다. Google Workspace Developer Preview Program 가입과 Google Cloud 설정이 필요합니다. 처음이면 설정 안내를 먼저 보세요. 조직 디렉터리는 회사·학교 Google Workspace 계정에서만 조회됩니다."
     },
     {
+      "id": "github-app",
+      "name": "GitHub (GitHub App 인증)",
+      "summary": "내가 등록한 GitHub App으로 브라우저 로그인해 저장소·코드·이슈·풀 리퀘스트를 조회하고 만듭니다.",
+      "description": "GitHub이 공식 권장하는 인증 앱 방식입니다. 허용할 저장소와 권한(Contents, Issues, PR 등)만 골라 안전하게 연결할 수 있고, 토큰이 자동으로 갱신됩니다. 리디렉션 주소는 http://localhost:45789/oauth2callback 입니다.",
+      "category": "GitHub",
+      "publisher": "GitHub (공식 원격 서버)",
+      "homepage": "https://github.com/github/github-mcp-server",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/github.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://api.githubcopilot.com/mcp/",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [],
+          "authorizationEndpoint": "https://github.com/login/oauth/authorize",
+          "tokenEndpoint": "https://github.com/login/oauth/access_token",
+          "extraParams": {},
+          "group": "github-app"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "GitHub App Client ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "Iv23li...",
+          "help": "GitHub Settings → Developer settings → GitHub Apps에서 만든 앱의 Client ID입니다. (Callback URL: http://localhost:45789/oauth2callback)",
+          "helpUrl": "https://github.com/settings/apps"
+        },
+        {
+          "key": "client_secret",
+          "label": "GitHub App Client Secret",
+          "type": "secret",
+          "required": true,
+          "placeholder": "Client secret 값",
+          "help": "GitHub App 설정의 Client secrets에서 Generate a new client secret으로 만든 값입니다.",
+          "helpUrl": "https://github.com/settings/apps"
+        }
+      ],
+      "safeTools": [
+        "get_commit",
+        "get_file_contents",
+        "get_label",
+        "get_latest_release",
+        "get_me",
+        "get_release_by_tag",
+        "get_tag",
+        "get_team_members",
+        "get_teams",
+        "issue_read",
+        "list_branches",
+        "list_commits",
+        "list_issue_fields",
+        "list_issue_types",
+        "list_issues",
+        "list_pull_requests",
+        "list_releases",
+        "list_repository_collaborators",
+        "list_tags",
+        "pull_request_read",
+        "run_secret_scanning",
+        "search_code",
+        "search_commits",
+        "search_issues",
+        "search_pull_requests",
+        "search_repositories",
+        "search_users",
+        "ui_get"
+      ]
+    },
+    {
+      "id": "github-app-readonly",
+      "name": "GitHub (GitHub App 인증 · 읽기 전용)",
+      "summary": "내가 등록한 GitHub App으로 브라우저 로그인해 저장소·코드·이슈·풀 리퀘스트를 읽기만 합니다.",
+      "description": "읽기 전용 엔드포인트(/mcp/readonly)를 사용하며, 이미 'GitHub (GitHub App 인증)'에 입력한 클라이언트 정보가 있으면 그대로 함께 씁니다.",
+      "category": "GitHub",
+      "publisher": "GitHub (공식 원격 서버)",
+      "homepage": "https://github.com/github/github-mcp-server",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/github.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://api.githubcopilot.com/mcp/readonly",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [],
+          "authorizationEndpoint": "https://github.com/login/oauth/authorize",
+          "tokenEndpoint": "https://github.com/login/oauth/access_token",
+          "extraParams": {},
+          "group": "github-app"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "GitHub App Client ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "Iv23li...",
+          "help": "GitHub Settings → Developer settings → GitHub Apps에서 만든 앱의 Client ID입니다. (Callback URL: http://localhost:45789/oauth2callback)",
+          "helpUrl": "https://github.com/settings/apps"
+        },
+        {
+          "key": "client_secret",
+          "label": "GitHub App Client Secret",
+          "type": "secret",
+          "required": true,
+          "placeholder": "Client secret 값",
+          "help": "GitHub App 설정의 Client secrets에서 Generate a new client secret으로 만든 값입니다.",
+          "helpUrl": "https://github.com/settings/apps"
+        }
+      ],
+      "safeTools": [
+        "get_commit",
+        "get_file_contents",
+        "get_label",
+        "get_latest_release",
+        "get_me",
+        "get_release_by_tag",
+        "get_tag",
+        "get_team_members",
+        "get_teams",
+        "issue_read",
+        "list_branches",
+        "list_commits",
+        "list_issue_fields",
+        "list_issue_types",
+        "list_issues",
+        "list_pull_requests",
+        "list_releases",
+        "list_repository_collaborators",
+        "list_tags",
+        "pull_request_read",
+        "run_secret_scanning",
+        "search_code",
+        "search_commits",
+        "search_issues",
+        "search_pull_requests",
+        "search_repositories",
+        "search_users",
+        "ui_get"
+      ]
+    },
+    {
+      "id": "github-oauth",
+      "name": "GitHub (OAuth App 인증)",
+      "summary": "GitHub OAuth App으로 브라우저에서 로그인해 저장소·코드·이슈·풀 리퀘스트를 조회하고 만듭니다.",
+      "description": "권한 설정 없이 Callback URL(http://localhost:45789/oauth2callback)만 등록해 가장 간단하게 만들 수 있는 OAuth 인증 앱 방식입니다.",
+      "category": "GitHub",
+      "publisher": "GitHub (공식 원격 서버)",
+      "homepage": "https://github.com/github/github-mcp-server",
+      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/github.md",
+      "requires": [],
+      "install": {
+        "transport": "http",
+        "url": "https://api.githubcopilot.com/mcp/",
+        "oauth": {
+          "clientId": "{client_id}",
+          "clientSecret": "{client_secret}",
+          "scopes": [],
+          "authorizationEndpoint": "https://github.com/login/oauth/authorize",
+          "tokenEndpoint": "https://github.com/login/oauth/access_token",
+          "extraParams": {
+            "scope": "repo read:org read:user user:email gist notifications"
+          },
+          "group": "github-oauth"
+        }
+      },
+      "inputs": [
+        {
+          "key": "client_id",
+          "label": "OAuth App Client ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ov23li...",
+          "help": "GitHub Developer settings → OAuth Apps에서 만든 앱의 Client ID입니다. (Callback URL: http://localhost:45789/oauth2callback)",
+          "helpUrl": "https://github.com/settings/developers"
+        },
+        {
+          "key": "client_secret",
+          "label": "OAuth App Client Secret",
+          "type": "secret",
+          "required": true,
+          "placeholder": "Client secret 값",
+          "helpUrl": "https://github.com/settings/developers"
+        }
+      ],
+      "safeTools": [
+        "get_commit",
+        "get_file_contents",
+        "get_label",
+        "get_latest_release",
+        "get_me",
+        "get_release_by_tag",
+        "get_tag",
+        "get_team_members",
+        "get_teams",
+        "issue_read",
+        "list_branches",
+        "list_commits",
+        "list_issue_fields",
+        "list_issue_types",
+        "list_issues",
+        "list_pull_requests",
+        "list_releases",
+        "list_repository_collaborators",
+        "list_tags",
+        "pull_request_read",
+        "run_secret_scanning",
+        "search_code",
+        "search_commits",
+        "search_issues",
+        "search_pull_requests",
+        "search_repositories",
+        "search_users",
+        "ui_get"
+      ]
+    },
+    {
       "id": "github",
-      "name": "GitHub",
+      "name": "GitHub (개인 액세스 토큰)",
       "summary": "내 GitHub 저장소의 코드, 커밋, 이슈, 풀 리퀘스트를 조회하고 새로 만듭니다. 파일 수정·이슈 작성·PR 병합 등은 실행할 때마다 승인을 묻습니다.",
       "description": "설치할 프로그램이 없는 GitHub 공식 원격 서버입니다. 개인 액세스 토큰(PAT) 하나만 넣으면 바로 연결됩니다.",
       "category": "GitHub",
@@ -651,7 +874,7 @@
     },
     {
       "id": "github-readonly",
-      "name": "GitHub (읽기 전용)",
+      "name": "GitHub (개인 액세스 토큰 · 읽기 전용)",
       "summary": "내 GitHub 저장소의 코드, 커밋, 이슈, 풀 리퀘스트를 읽기만 합니다. 코드 수정이나 이슈·PR 생성은 하지 못합니다.",
       "description": "읽기 전용 엔드포인트(/mcp/readonly)에 연결하므로 실수로 저장소를 바꿀 염려가 없습니다.",
       "category": "GitHub",
@@ -675,86 +898,6 @@
           "placeholder": "github_pat_... 또는 ghp_...",
           "help": "GitHub 설정 → Developer settings → Personal access tokens에서 만들거나, gh CLI를 쓴다면 'gh auth token' 값을 넣으세요.",
           "helpUrl": "https://github.com/settings/personal-access-tokens"
-        }
-      ],
-      "safeTools": [
-        "get_commit",
-        "get_file_contents",
-        "get_label",
-        "get_latest_release",
-        "get_me",
-        "get_release_by_tag",
-        "get_tag",
-        "get_team_members",
-        "get_teams",
-        "issue_read",
-        "list_branches",
-        "list_commits",
-        "list_issue_fields",
-        "list_issue_types",
-        "list_issues",
-        "list_pull_requests",
-        "list_releases",
-        "list_repository_collaborators",
-        "list_tags",
-        "pull_request_read",
-        "run_secret_scanning",
-        "search_code",
-        "search_commits",
-        "search_issues",
-        "search_pull_requests",
-        "search_repositories",
-        "search_users",
-        "ui_get"
-      ]
-    },
-    {
-      "id": "github-oauth",
-      "name": "GitHub (브라우저 로그인)",
-      "summary": "개인 액세스 토큰 대신 브라우저로 GitHub 계정에 로그인해 저장소·이슈·풀 리퀘스트를 다룹니다.",
-      "description": "GitHub OAuth App을 한 번 등록한 뒤 브라우저 로그인으로 연결합니다. 리디렉션 주소는 http://localhost:45789/oauth2callback 입니다.",
-      "category": "GitHub",
-      "publisher": "GitHub (공식 원격 서버)",
-      "homepage": "https://github.com/github/github-mcp-server",
-      "guide": "https://github.com/kidarigun/exaone-catalog/blob/main/docs/github.md",
-      "requires": [],
-      "install": {
-        "transport": "http",
-        "url": "https://api.githubcopilot.com/mcp/",
-        "oauth": {
-          "clientId": "{client_id}",
-          "clientSecret": "{client_secret}",
-          "scopes": [
-            "repo",
-            "read:org",
-            "read:user",
-            "user:email",
-            "gist",
-            "notifications"
-          ],
-          "authorizationEndpoint": "https://github.com/login/oauth/authorize",
-          "tokenEndpoint": "https://github.com/login/oauth/access_token",
-          "extraParams": {},
-          "group": "github"
-        }
-      },
-      "inputs": [
-        {
-          "key": "client_id",
-          "label": "GitHub OAuth App Client ID",
-          "type": "text",
-          "required": true,
-          "placeholder": "Ov23li...",
-          "help": "GitHub Developer settings → OAuth Apps에서 만든 앱의 Client ID입니다. (Callback URL: http://localhost:45789/oauth2callback)",
-          "helpUrl": "https://github.com/settings/developers"
-        },
-        {
-          "key": "client_secret",
-          "label": "GitHub OAuth App Client Secret",
-          "type": "secret",
-          "required": true,
-          "placeholder": "Client secret 값",
-          "helpUrl": "https://github.com/settings/developers"
         }
       ],
       "safeTools": [
