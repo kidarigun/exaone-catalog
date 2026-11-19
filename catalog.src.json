@@ -1319,6 +1319,388 @@
         "path": "skills/diagnosing-superpowers"
       },
       "note": "Claude Code·Codex 등의 세션 로그 형식을 기준으로 작성되어 있습니다."
+    },
+    {
+      "id": "design-ui-ux-pro-max",
+      "name": "UI/UX Pro Max — 통합 웹·앱 디자인",
+      "summary": "산업·스타일별 색상 팔레트, 타이포그래피 조합, 레이아웃 패턴과 UX 체크리스트 데이터베이스로 완성도 높은 웹·앱 UI를 설계합니다.",
+      "category": "웹 디자인",
+      "publisher": "NextLevelBuilder (ui-ux-pro-max-skill)",
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/2de1134dc4d1cfe112934611ae5803ae17a1bd7e/.claude/skills/ui-ux-pro-max",
+      "license": "MIT",
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "commit": "2de1134dc4d1cfe112934611ae5803ae17a1bd7e",
+        "path": ".claude/skills/ui-ux-pro-max"
+      },
+      "requires": [
+        "python"
+      ],
+      "note": "내장 Python 검색 스크립트로 스타일·팔레트·폰트 조합을 조회합니다."
+    },
+    {
+      "id": "design-ui-styling",
+      "name": "모던 웹 UI 스타일링 (Tailwind·shadcn/ui)",
+      "summary": "Tailwind CSS와 shadcn/ui(Radix UI)를 활용한 반응형 컴포넌트, 다크 모드, 접근성 높은 웹 인터페이스 구현을 안내합니다.",
+      "category": "웹 디자인",
+      "publisher": "NextLevelBuilder (ui-ux-pro-max-skill)",
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/2de1134dc4d1cfe112934611ae5803ae17a1bd7e/.claude/skills/ui-styling",
+      "license": "MIT",
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "commit": "2de1134dc4d1cfe112934611ae5803ae17a1bd7e",
+        "path": ".claude/skills/ui-styling"
+      },
+      "requires": [
+        "python"
+      ]
+    },
+    {
+      "id": "webdesign-tailwindcss",
+      "name": "Tailwind CSS 웹 디자인·레이아웃",
+      "summary": "Tailwind CSS 기반의 레이아웃 구성, 반응형 분기, 타이포그래피·테마 토큰·모던 컴포넌트 패턴을 안내합니다.",
+      "category": "웹 디자인",
+      "publisher": "MengTo (MengTo/Skills)",
+      "homepage": "https://github.com/MengTo/Skills/tree/1a32b45a57f435f1564544e7267a71fc3b180a7a/agent-skills/web-design/tailwindcss",
+      "license": "MIT",
+      "source": {
+        "repo": "MengTo/Skills",
+        "commit": "1a32b45a57f435f1564544e7267a71fc3b180a7a",
+        "path": "agent-skills/web-design/tailwindcss"
+      }
+    },
+    {
+      "id": "webdesign-landing-page",
+      "name": "랜딩 페이지 디자인 (Landing Page)",
+      "summary": "SaaS·제품 소개용 고전환 랜딩 페이지의 히어로 섹션, 가치 제안, 사회적 증거, CTA 구조를 설계하고 구현합니다.",
+      "category": "웹 디자인",
+      "publisher": "MengTo (MengTo/Skills)",
+      "homepage": "https://github.com/MengTo/Skills/tree/1a32b45a57f435f1564544e7267a71fc3b180a7a/agent-skills/web-design/landing-page",
+      "license": "MIT",
+      "source": {
+        "repo": "MengTo/Skills",
+        "commit": "1a32b45a57f435f1564544e7267a71fc3b180a7a",
+        "path": "agent-skills/web-design/landing-page"
+      }
+    },
+    {
+      "id": "webdesign-pricing-page",
+      "name": "요금제·가격 페이지 디자인 (Pricing Page)",
+      "summary": "요금제 카드 구성, 기능 비교표, 월간/연간 결제 전환 등 SaaS 가격 페이지를 명확하고 전환율 높게 설계합니다.",
+      "category": "웹 디자인",
+      "publisher": "MengTo (MengTo/Skills)",
+      "homepage": "https://github.com/MengTo/Skills/tree/1a32b45a57f435f1564544e7267a71fc3b180a7a/agent-skills/web-design/pricing-page",
+      "license": "MIT",
+      "source": {
+        "repo": "MengTo/Skills",
+        "commit": "1a32b45a57f435f1564544e7267a71fc3b180a7a",
+        "path": "agent-skills/web-design/pricing-page"
+      }
+    },
+    {
+      "id": "webdesign-editorial-tech",
+      "name": "에디토리얼·테크 웹 디자인 (Editorial Tech)",
+      "summary": "매거진 스타일의 비대칭 타이포그래피와 정밀한 테크 프로덕트 디테일을 조화시킨 세련된 웹 레이아웃을 만듭니다.",
+      "category": "웹 디자인",
+      "publisher": "MengTo (MengTo/Skills)",
+      "homepage": "https://github.com/MengTo/Skills/tree/1a32b45a57f435f1564544e7267a71fc3b180a7a/agent-skills/web-design/editorial-tech",
+      "license": "MIT",
+      "source": {
+        "repo": "MengTo/Skills",
+        "commit": "1a32b45a57f435f1564544e7267a71fc3b180a7a",
+        "path": "agent-skills/web-design/editorial-tech"
+      }
+    },
+    {
+      "id": "webdesign-dark-glass",
+      "name": "다크 글래스 레이아웃 (Dark Glass Layout)",
+      "summary": "반투명 유리(Glassmorphism) 질감과 깔끔한 다단 워크스페이스로 모던 다크 모드 웹 UI를 구축합니다.",
+      "category": "웹 디자인",
+      "publisher": "MengTo (MengTo/Skills)",
+      "homepage": "https://github.com/MengTo/Skills/tree/1a32b45a57f435f1564544e7267a71fc3b180a7a/agent-skills/web-design/dark-glass-clean-layout",
+      "license": "MIT",
+      "source": {
+        "repo": "MengTo/Skills",
+        "commit": "1a32b45a57f435f1564544e7267a71fc3b180a7a",
+        "path": "agent-skills/web-design/dark-glass-clean-layout"
+      }
+    },
+    {
+      "id": "webdesign-gsap",
+      "name": "GSAP 웹 애니메이션·스크롤 효과",
+      "summary": "GSAP 타임라인·ScrollTrigger를 활용해 부드럽고 정교한 웹 모션 및 스크롤 인터랙션을 구현합니다.",
+      "category": "웹 디자인",
+      "publisher": "MengTo (MengTo/Skills)",
+      "homepage": "https://github.com/MengTo/Skills/tree/1a32b45a57f435f1564544e7267a71fc3b180a7a/agent-skills/web-design/gsap",
+      "license": "MIT",
+      "source": {
+        "repo": "MengTo/Skills",
+        "commit": "1a32b45a57f435f1564544e7267a71fc3b180a7a",
+        "path": "agent-skills/web-design/gsap"
+      }
+    },
+    {
+      "id": "webdesign-threejs",
+      "name": "Three.js 인터랙티브 3D 웹",
+      "summary": "Three.js로 웹 페이지에 3D 장면, 조명, 카메라 제어, 인터랙티브 효과를 구현하는 방법을 안내합니다.",
+      "category": "웹 디자인",
+      "publisher": "MengTo (MengTo/Skills)",
+      "homepage": "https://github.com/MengTo/Skills/tree/1a32b45a57f435f1564544e7267a71fc3b180a7a/agent-skills/web-design/threejs",
+      "license": "MIT",
+      "source": {
+        "repo": "MengTo/Skills",
+        "commit": "1a32b45a57f435f1564544e7267a71fc3b180a7a",
+        "path": "agent-skills/web-design/threejs"
+      }
+    },
+    {
+      "id": "design-slides",
+      "name": "웹 프레젠테이션·슬라이드 디자인 (HTML Slides)",
+      "summary": "Chart.js 차트·디자인 토큰·반응형 레이아웃을 적용한 웹 기반 HTML 프레젠테이션을 만듭니다.",
+      "category": "웹 디자인",
+      "publisher": "NextLevelBuilder (ui-ux-pro-max-skill)",
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/2de1134dc4d1cfe112934611ae5803ae17a1bd7e/.claude/skills/slides",
+      "license": "MIT",
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "commit": "2de1134dc4d1cfe112934611ae5803ae17a1bd7e",
+        "path": ".claude/skills/slides"
+      }
+    },
+    {
+      "id": "jakub-build-design",
+      "name": "디자인 시안 → 웹 UI 코드 구현 (Build Design)",
+      "summary": "디자인 이미지나 시안을 바탕으로 프로젝트의 기존 컴포넌트·디자인 토큰에 맞춰 웹 UI 코드로 구현합니다.",
+      "category": "웹 디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/build-design",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/build-design"
+      },
+      "note": "디자인 이미지 파일을 프로젝트에 두고 요청하거나 Figma MCP를 연결해 쓸 수 있습니다."
+    },
+    {
+      "id": "jakub-explain-interface",
+      "name": "웹사이트 UI·애니메이션 구조 분석 (Explain Interface)",
+      "summary": "웹 화면의 시각 효과, 레이아웃 기법, 애니메이션 구현 원리를 구조적으로 분석하고 설명합니다.",
+      "category": "웹 디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/explain-interface",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/explain-interface"
+      },
+      "note": "실시간 웹사이트 URL 분석에는 Fetch/브라우저 MCP 또는 프로젝트 코드와 함께 쓰는 것이 좋습니다."
+    },
+    {
+      "id": "design-system",
+      "name": "디자인 시스템·토큰 설계 (Design System)",
+      "summary": "프리미티브·시맨틱·컴포넌트 3계층 디자인 토큰 아키텍처와 컴포넌트 사양서를 체계적으로 설계합니다.",
+      "category": "디자인",
+      "publisher": "NextLevelBuilder (ui-ux-pro-max-skill)",
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/2de1134dc4d1cfe112934611ae5803ae17a1bd7e/.claude/skills/design-system",
+      "license": "MIT",
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "commit": "2de1134dc4d1cfe112934611ae5803ae17a1bd7e",
+        "path": ".claude/skills/design-system"
+      },
+      "requires": [
+        "python"
+      ]
+    },
+    {
+      "id": "design-general",
+      "name": "종합 비주얼·로고·아이콘 디자인 (Design)",
+      "summary": "브랜드 아이덴티티, 로고·아이콘 설계(SVG), 디자인 토큰 생성까지 전반적인 시각 디자인을 돕습니다.",
+      "category": "디자인",
+      "publisher": "NextLevelBuilder (ui-ux-pro-max-skill)",
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/2de1134dc4d1cfe112934611ae5803ae17a1bd7e/.claude/skills/design",
+      "license": "MIT",
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "commit": "2de1134dc4d1cfe112934611ae5803ae17a1bd7e",
+        "path": ".claude/skills/design"
+      },
+      "requires": [
+        "python"
+      ]
+    },
+    {
+      "id": "design-brand",
+      "name": "브랜드 아이덴티티·가이드라인 (Brand)",
+      "summary": "브랜드 보이스, 비주얼 아이덴티티, 메시징 프레임워크와 일관된 브랜드 가이드라인을 정립합니다.",
+      "category": "디자인",
+      "publisher": "NextLevelBuilder (ui-ux-pro-max-skill)",
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/2de1134dc4d1cfe112934611ae5803ae17a1bd7e/.claude/skills/brand",
+      "license": "MIT",
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "commit": "2de1134dc4d1cfe112934611ae5803ae17a1bd7e",
+        "path": ".claude/skills/brand"
+      },
+      "requires": [
+        "python"
+      ]
+    },
+    {
+      "id": "design-banner",
+      "name": "배너·히어로 이미지 디자인 (Banner Design)",
+      "summary": "웹사이트 히어로 배너, 소셜 미디어·광고용 배너 레이아웃과 비주얼 구성을 아트 디렉션과 함께 설계합니다.",
+      "category": "디자인",
+      "publisher": "NextLevelBuilder (ui-ux-pro-max-skill)",
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/2de1134dc4d1cfe112934611ae5803ae17a1bd7e/.claude/skills/banner-design",
+      "license": "MIT",
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "commit": "2de1134dc4d1cfe112934611ae5803ae17a1bd7e",
+        "path": ".claude/skills/banner-design"
+      }
+    },
+    {
+      "id": "jakub-better-interface",
+      "name": "인터페이스 종합 디자인 점검 (Better Interface)",
+      "summary": "화면·흐름·전체 UI를 접근성, 레이아웃, 문구, 타이포그래피, 색상, 디테일 기준으로 종합 검토하고 개선합니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/better-interface",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/better-interface"
+      }
+    },
+    {
+      "id": "jakub-better-ui",
+      "name": "UI 디테일·표면·모션 다듬기 (Better UI)",
+      "summary": "테두리 곡률(border radius), 시각적 정렬(optical alignment), 그림자, 아이콘과 인터랙션 디테일을 정밀하게 다듬습니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/better-ui",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/better-ui"
+      }
+    },
+    {
+      "id": "jakub-better-layout",
+      "name": "레이아웃·정렬·반응형 구조 (Better Layout)",
+      "summary": "요소 그룹화, 정렬, 읽기 순서, 반응형 여백과 다국어 텍스트 확장 여지까지 고려해 레이아웃을 설계합니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/better-layout",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/better-layout"
+      }
+    },
+    {
+      "id": "jakub-better-typography",
+      "name": "타이포그래피·가독성 다듬기 (Better Typography)",
+      "summary": "글자 크기 스케일, 줄 간격, 자간, 줄바꿈과 말줄임(truncation)까지 웹 텍스트 렌더링 품질을 체계적으로 맞춥니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/better-typography",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/better-typography"
+      }
+    },
+    {
+      "id": "jakub-better-colors",
+      "name": "색상 팔레트·시맨틱 컬러 시스템 (Better Colors)",
+      "summary": "조화로운 색상 팔레트를 만들고, 대비율(WCAG)을 검증하며, 라이트/다크 모드용 시맨틱 컬러 토큰을 설계합니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/better-colors",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/better-colors"
+      }
+    },
+    {
+      "id": "jakub-better-accessibility",
+      "name": "웹·UI 접근성 점검 및 개선 (Better Accessibility)",
+      "summary": "키보드 탐색·포커스 이동, ARIA 속성, 폼 레이블, 스크린 리더 안내 등 웹 UI 접근성을 점검하고 고칩니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/better-accessibility",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/better-accessibility"
+      }
+    },
+    {
+      "id": "jakub-better-writing",
+      "name": "UI 문구·마이크로카피 다듬기 (Better Writing)",
+      "summary": "버튼 레이블, 오류 메시지, 빈 화면(empty state), 확인 대화상자 문구를 명확하고 일관되게 작성합니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/better-writing",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/better-writing"
+      }
+    },
+    {
+      "id": "jakub-interface-review",
+      "name": "변경된 UI 디자인·품질 리뷰 (Interface Review)",
+      "summary": "최근 수정된 코드·브랜치·PR에서 새롭게 생기거나 기존과 달라진 UI·접근성·레이아웃 문제를 리뷰합니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/interface-review",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/interface-review"
+      }
+    },
+    {
+      "id": "jakub-variant",
+      "name": "UI 컴포넌트 다중 시안 제작·비교 (Variant)",
+      "summary": "작업 중인 UI 컴포넌트의 여러 디자인 시안을 나란히 만들어 비교하고 선택하며 다듬도록 돕습니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/variant",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/variant"
+      }
+    },
+    {
+      "id": "jakub-state-machine",
+      "name": "UI 상태별 화면 시뮬레이션 (State Machine)",
+      "summary": "로딩·빈 상태·오류·성공 등 UI 컴포넌트의 모든 상태를 임시 페이지에서 전환해 보며 검증합니다.",
+      "category": "디자인",
+      "publisher": "Jakub Krehel (jakubkrehel/skills)",
+      "homepage": "https://github.com/jakubkrehel/skills/tree/547d415dc10a23e66088eba5aa6664e6e772432c/skills/state-machine",
+      "license": "MIT",
+      "source": {
+        "repo": "jakubkrehel/skills",
+        "commit": "547d415dc10a23e66088eba5aa6664e6e772432c",
+        "path": "skills/state-machine"
+      }
     }
   ]
 }

@@ -62,4 +62,12 @@ LICENSE 파일이 없는 `doc-coauthoring`은 넣지 않았습니다. 원본을 
 `obra/superpowers` 저장소의 Skill 15개를 커밋 `22f0b46`으로 고정해 옮겨 왔습니다 (모두 MIT).
 zip에는 저장소 루트의 원본 `LICENSE`와 함께 출처를 적은 `SOURCE.md`를 넣습니다.
 
+### 웹 디자인 · 디자인 Skill
+
+다음 저장소의 웹 디자인·UI/UX·디자인 시스템·브랜드 관련 Skill 26개를 고정 커밋으로 옮겨 왔습니다 (모두 MIT).
+
+- `nextlevelbuilder/ui-ux-pro-max-skill` (`2de1134`): `ui-ux-pro-max`, `ui-styling`, `design-system`, `design`, `brand`, `banner-design`, `slides` (7종)
+- `MengTo/Skills` (`1a32b45`): `tailwindcss`, `landing-page`, `pricing-page`, `editorial-tech`, `dark-glass-clean-layout`, `gsap`, `threejs` (7종)
+- `jakubkrehel/skills` (`547d415`): `better-interface`, `better-ui`, `better-layout`, `better-typography`, `better-colors`, `better-accessibility`, `better-writing`, `build-design`, `interface-review`, `explain-interface`, `variant`, `state-machine` (12종)
+
 앱은 zip을 받은 뒤 sha256이 맞을 때만 설치합니다.
